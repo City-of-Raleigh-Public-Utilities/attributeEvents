@@ -8,6 +8,13 @@ import arcpy
 #set workspace
 arcpy.env.workspace = "Database Connections\\RPUD.sde" # Need to change this to work where it runs
 
+records = [
+    {
+        feature: 'RPUD.wHydrants',
+        table: 'RPUD.hydrantEvents'
+    }
+]
+
 def findNewEvents(inFeature, eventTables):
     #Get event table fields
     #For each record does
